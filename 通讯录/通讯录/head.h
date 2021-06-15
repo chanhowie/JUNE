@@ -6,6 +6,14 @@
 #define Max_num 11
 #define Max_addr 10
 #define Max_contact_num 100
+enum
+{
+	EXIT,
+	ADDT,
+	DELE,
+	SHOW,
+	SERC
+};
 
 struct peoinfo
 {
@@ -21,5 +29,7 @@ struct Contact
 };
 void initcon(struct Contact* con);
 void ADDTION(struct Contact* con);
-void DELETE(struct Contact* con);
-void show();
+void DELETE();
+void SERCH(const struct Contact* con);
+void show(struct Contact* con);
+int FindByName(struct Contact* con,char name[]);
