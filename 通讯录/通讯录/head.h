@@ -12,7 +12,8 @@ enum
 	ADDT,
 	DELE,
 	SHOW,
-	SERC
+	SERC,
+	MODIFY
 };
 
 struct peoinfo
@@ -31,5 +32,6 @@ void initcon(struct Contact* con);
 void ADDTION(struct Contact* con);
 void DELETE();
 void SERCH(const struct Contact* con);
-void show(struct Contact* con);
-int FindByName(struct Contact* con,char name[]);
+void show(const struct Contact* con);
+int FindByName(const struct Contact* con, char name[]);
+void Modifybyname(struct Contact* con);
